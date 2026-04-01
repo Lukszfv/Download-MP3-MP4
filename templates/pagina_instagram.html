@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Conversor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='paginas-de-converter.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/favicon.png') }}?v=4" type="image/png">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='imagens/favicon.png') }}?v=4">
+</head>
+<body>
+    <nav class="navbar_instagram">
+        <div class="logo">Conversor de Downloads</div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#">Como Usar</a></li>
+        </ul>
+    </nav>
+
+    <div class="converter-card">
+        <h2>Instagram conversor MP3 e MP4</h2>
+        <p>Converta facilmente vídeos do Instagram para MP3 ou MP4. Basta colar o link e salvar seu Download instantaneamente. Downloads ilimitados sem anúncios.</p>
+        <div class="input-group">
+            <form action="/download" method="POST">
+                <input type="text" name="url" placeholder="Cole o link do Instagram" required>
+
+                <select name="format">
+                    <option value="mp4">MP4 (Vídeo)</option>
+                    <option value="mp3">MP3 (Áudio)</option>
+                </select>
+
+                <button type="submit">Download</button>
+            </form>
+        </div>
+        <p class="disclaimer">Certifique-se de que os arquivos baixados não violem direitos autorais. Músicas protegidas por copyright não podem ser baixadas usando esta ferramenta.</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Conversor de Downloads. Todos os direitos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Serviço</a></li>
+            <li><a href="#">Suporte</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

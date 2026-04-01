@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/estilo_principal.css">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/favicon.png') }}?v=4" type="image/png">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='imagens/favicon.png') }}?v=4">
+    <title>Conversor downloads</title>
+</head>
+<script>
+    function tiktokIndisponivel() {
+        alert(
+            "⚠️ TikTok temporariamente indisponível.\n\n" +
+            "O download do TikTok está desativado no momento por manutenção.\n" +
+            "Tente novamente mais tarde."
+        );
+    }
+</script>
+
+<body>
+    <header>
+        <nav>
+            <p class="nav-left">Conversor de Downloads</p>
+
+            <a href="home.html" class="nav-center">Home</a>
+
+            <div class="nav-right">
+                <select class="language-select" id="language">
+                    <option value="pt" selected>Português (BR)</option>
+                    <option value="en">English (US)</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <h1>Bem-vindo ao Conversor de Downloads</h1>
+        <p>Converta vídeos do YouTube, Twitter, TikTok, e Instagram para MP3 ou MP4. Para isso basta apenas clicar em
+            qual das redes socias você quer converter e colar o link e salvar seu MP3 ou MP4. Downloads ilimitados sem
+            anúncios.</p>
+
+        <h2>Outras Plataformas</h2>
+        <div class="platforms">
+            <a href="/youtube" class="card youtube">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                <div class="card-content">
+                    <h3>YouTube Downloader</h3>
+                    <p>Baixe vídeos do YouTube em MP4 ou MP3 com qualidade máxima.</p>
+                </div>
+            </a>
+
+            <a href="{{ url_for('twitter') }}" class="card twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                <div class="card-content">
+                    <h3>Twitter Downloader</h3>
+                    <p>Converta vídeos do Twitter para MP4 ou MP3 rapidamente.</p>
+                </div>
+            </a>
+
+            <a href="javascript:void(0)" class="card tiktok disabled" onclick="tiktokIndisponivel()">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" alt="TikTok">
+                <div class="card-content">
+                    <h3>TikTok Downloader</h3>
+                    <p>Indisponível no momento.</p>
+                </div>
+            </a>
+
+            <a href="/instagram" class="card instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+                <div class="card-content">
+                    <h3>Instagram Downloader</h3>
+                    <p>Baixe vídeos e reels do Instagram facilmente e sem anúncios.</p>
+                </div>
+            </a>
+        </div>
+
+
+        <h2>Perguntas Frequentes</h2>
+        <section class="faq">
+            <details>
+                <summary>É gratuito baixar vídeos?</summary>
+                <p>Sim! O Conversor de Downloads é totalmente gratuito e não exige cadastro.</p>
+            </details>
+
+            <details>
+                <summary>Posso usar no celular?</summary>
+                <p>Sim, o site é compatível com qualquer dispositivo móvel ou computador.</p>
+            </details>
+
+            <details>
+                <summary>Os vídeos baixados têm marca d’água?</summary>
+                <p>Não! Sempre que possível, os vídeos são processados sem marca d’água.</p>
+            </details>
+
+            <details>
+                <summary>Posso converter para MP3?</summary>
+                <p>Sim! Você pode escolher entre formato de vídeo (MP4) ou áudio (MP3).</p>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Conversor de Downloads. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
